@@ -1,1 +1,139 @@
-Hello World!
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Hayley Harris</title>
+<link rel="stylesheet" href="css/main.css">
+</head>
+<body ng-app="portfolioApp" ng-controller="mainCtrl as ctrl">
+	<a name="home"></a>
+	<div class="fill-screen">
+		<img class="title-image" src="images/triangle-bg.png"/>
+		<div class="heading title-heading">Hayley Harris</div>
+		<div class="nav-divider" fixed-nav-bar="fixed-at-top">
+			<div class="nav-list">
+				<ul>
+					<li><a href="#home">Home</a></li>
+					<li><a href="#experience">Experience</a></li>
+					<li><a href="#research">Research</a></li>
+					<li><a href="#art">Art</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+
+	<a name="experience">&nbsp</a><br>
+
+	<div>
+		<div class="row">
+		<div class="width-40 col-margin-right">
+			<div class="heading">Work Experience</div>
+			<div class="content-container">
+			<p class="subheader">Accenture, D.C. <span class="position">System Developer Senior Analyst</span></p>
+			<p class="date">May 2016 - Present</p>
+			<p>Full-stack web development with an emphasis on AngularJS and Spring Web MVC.</p>
+			<p>Co-lead of Community Service Committee.</p>
+			</div>
+
+			<div class="content-container">
+			<p class="subheader">Accenture, Chantilly, VA <span class="position">Software Developer Intern</span></p>
+			<p class="date">May 2015 - August 2015</p>
+			<p>Redesigned home page for USPS web application.<p>
+			<p>Performed smoke and regression testing.</p>
+			</div>
+
+			<div class="content-container">
+			<p class="subheader">George Mason University, Fairfax, VA <span class="position">Peer Mentor</span></p>
+			<p class="date">May 2015 - August 2015</p>
+			<p>Tutored students in Computer Science and Math courses.<p>
+			<p>Interacted with visiting prospective students.</p>
+			</div>
+		</div>
+
+		<div class="width-40">
+			<div class="heading">Volunteer Work</div>
+			<div class="content-container">
+				<p><span class="subheader">Community Service Committee Co-lead</span> for Accenture starting January 2017 to present.<p>
+				<p><span class="subheader">SNAP/EBT Booth volunteer</span> for the Old Town Alexandria Farmers Market during December 2016 - April 2017.</p>
+			</div>
+
+			<div class="heading">Certifications</div>
+			<div class="content-container">
+				<p><span class="subheader">AWS Certified Developer</span> - Associate obtained June 2017.</p>
+				<p><span class="subheader">Oracle Certified Associate, Java SE 7 Programmer</span> obtained August 2016.</p>
+				<p><span class="subheader">ICAgile Certified Professional</span> obtained June 2016.</p>
+			</div>
+		</div>
+
+		</div>
+	</div>
+
+	<hr><a name="research" class="anchor">&nbsp</a>
+
+	<div class="extra-margin-bottom">
+		<div class="heading">Research</div>
+		<div class="row">
+			<div class="width-30 content-container">
+			<p class="subheader">Prime Labelings of Generalized Petersen Graphs</p>
+			<p class="date">December 2014 - December 2015</p>
+			<p>Presented at Mathematical Association of America 2015 Conference and awarded Second Place Student Paper.</p>
+			<p>Published in
+				<a href="http://msp.org/involve/2017/10-1/involve-v10-n1-p08-p.pdf">Involve Vol. 10 (2017), No. 1, 109-124.</a></p>
+		</div>
+		<div class="width-30 content-container">
+			<p class="subheader">Abstract</p>
+				A graph <span class="math-font">G</span> is called prime if the vertices of <span class="math-font">G</span>
+				signed distinct labels <span class="math-font">1,2,...,|V(G)|</span> such that the labels on any two
+				adjacent vertices are relatively prime. By showing that for every even <span class="math-font">n &le; 2.468x10^9</span>
+				there exists <span class="math-font">s &isin; [1,n-1]</span> such that both <span class="math-font">n+s</span>
+				and <span class="math-font">2n+s</span> are prime, we prove the generalized Peterson
+				graph <span class="math-font">P(n,1)</span> is prime for all even <span class="math-font">n &isin; [4,2.468x10^9]</span>.
+		</div>
+		<div class="width-30 content-container">
+			<p class="subheader">Demonstration</p>
+			<p>Please enter a positive even integer <span class="math-font">n</span> to demonstrate the conjecture.
+				A value <span class="math-font">s</span> will be generated such that <span class="math-font">n+s</span> and
+				<span class="math-font">2n+s</span> are both prime.</p>
+				<div class="row">
+				<input type="number" id="evenInt" ng-model="ctrl.evenInt" ng-change="ctrl.initPrimeVars()">
+				<button ng-click="ctrl.findValue()">Find Value</button>
+			</div>
+			<div ng-if="ctrl.validationError" class="error">Please enter a positive even integer.</div>
+			<div ng-if="ctrl.tooLarge" class="error">Sorry that number is out of range!</div>
+			<div ng-if="ctrl.sValue" class="result-text">
+				<span class="math-font">s = {{ctrl.sValue}}</span> <br>
+				<span class="math-font">{{ctrl.evenInt}} + {{ctrl.sValue}} = {{ctrl.evenInt + ctrl.sValue}}</span>
+				and <br>
+				<span class="math-font">{{2*ctrl.evenInt}} + {{ctrl.sValue}} = {{2*ctrl.evenInt + ctrl.sValue}}</span>
+				are prime.
+			</div>
+		</div>
+	</div>
+</div>
+
+<hr><a name="art">&nbsp</a><br>
+
+<div>
+	<div class="heading">Art</div>
+		<div class="horizontal-scroll">
+		<div class="row content-container pic-wrapper">
+			<div ng-repeat="p in ctrl.paintings" class="pic-container">
+				<img ng-src="images/{{p}}" class="pic-size"/>
+			</div>
+		</div>
+	</div>
+</div>
+
+<hr>
+
+<div class="footer">
+	<div>Hayley Harris</div>
+	<div>hayleyvharris@gmail.com</div>
+</div>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+<script type="text/javascript" src="js/portfolioApp.js"></script>
+<script type="text/javascript" src="js/fixedNavBar.js"></script>
+</body>
+</html>
