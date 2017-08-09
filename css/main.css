@@ -1,0 +1,213 @@
+body {
+	font-family: Helvetica, sans-serif;
+	font-size: 0.9em;
+	display: block;
+	float: left;
+	width: 95%;
+}
+
+a {
+	text-decoration: none;
+	color: #f47742;
+}
+
+a:hover {
+	color: #6d6d6d;
+}
+
+button {
+	background-color: #000;
+	border: none;
+	color: #fff;
+	padding: 3px;
+	margin: 0px 10px;
+	text-transform: uppercase;
+	font-size: 0.6em;
+}
+
+button:hover {
+	background-color: #6d6d6d;
+}
+
+hr {
+	margin: 50px 0px;
+	border-top: 2px dotted #f47742;
+}
+
+.width-100 {
+	width: 100%;
+}
+
+.width-75 {
+	width: 75%;
+}
+
+.width-50 {
+	width: 50%;
+}
+
+.width-40 {
+	width: 40%;
+}
+
+.width-30 {
+	width: 30%;
+}
+
+.width-25 {
+	width: 25%;
+}
+
+.col-margin-right {
+	margin-right: 10%;
+}
+
+.extra-margin-bottom {
+	margin-bottom: 50px;
+}
+
+.result-text {
+	margin-top: 15px;
+	line-height: 1.2;
+}
+
+.fill-screen {
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	position: relative;
+}
+
+.heading {
+	font-family: Georgia, serif;
+	font-size: 1.7em;
+	font-weight: bold;
+	margin: 40px 0px 20px 20px;
+}
+
+.title-image {
+	max-width: 100%;
+}
+
+.title-heading {
+	font-size: 7.5em;
+	float: right !important;
+}
+
+.fixed-at-top {
+	position: fixed;
+	top: 0;
+	width: 95%;
+	margin-bottom: 120px !important;
+}
+
+.nav-divider {
+	height: 45px;
+	background-color: #f47742;
+}
+
+.nav-list ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.nav-list ul li {
+	display: block;
+	float: left;
+	margin: 15px 20px;
+}
+
+.nav-list ul li a {
+	color: #fff;
+	text-decoration: none;
+	text-transform: uppercase;
+}
+
+.nav-list ul li a:hover {
+	color: #000;
+}
+
+.content-container {
+		margin: 40px 20px;
+}
+
+.subheader {
+	font-weight: bold;
+}
+
+.position {
+	font-style: italic;
+	font-weight: normal;
+}
+
+.date {
+	text-transform: uppercase;
+	color: #6d6d6d;
+	font-size: 10pt;
+}
+
+.row {
+	display: flex;
+	flex-direction: row;
+}
+
+.math-font {
+	font-family: Georgia, serif;
+	font-weight: bold;
+}
+
+.error {
+	color: #db2b2b;
+	font-size: 0.8em;
+	font-weight: bold;
+	padding: 10px 0px;
+}
+
+.horizontal-scroll {
+	overflow-y: hidden;
+	overflow-x: scroll;
+
+}
+
+.pic-wrapper {
+	width: 200%;
+	line-height: 70%;
+}
+
+.pic-container {
+	margin: 10px;
+	vertical-align: middle;
+}
+
+.pic-size {
+	width: 60%;
+	border: 10px solid #000;
+}
+
+.footer {
+	float: right !important;
+}
+
+.footer div {
+	text-transform: uppercase;
+	font-size: 0.7em;
+	text-align: right;
+	line-height: 1.5;
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 5px;
+		background: rgba(0,0,0,0.8);
+    -webkit-box-shadow: inset 0 0 3px rgba(0,0,0,1);
+}
